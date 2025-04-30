@@ -4,6 +4,9 @@ WORKDIR /app
 
 COPY ../* .
 
-RUN npm install --save-dev typescript
+RUN npm run setup
 
 EXPOSE 3000
+RUN npm run start
+
+CMD ["npm", "run", "start"]
