@@ -1,12 +1,5 @@
-console.log('App started');
+const taskStatusList = ['Pending', 'In Progress', 'Done'] as const; //as const makes taskStatusList a readonly tuple of exact string literals.
 
-const button = document.getElementById('counter');
-if (button) {
-    button.addEventListener('click', () => {
-        const span = button.querySelector('span');
-        if (span) {
-            const currentCount = parseInt(span.textContent || '0', 10);
-            span.textContent = (currentCount + 1).toString();
-        }
-    });
-}
+type TaskStatus = (typeof taskStatusList)[number]; // typeof taskStatusList[number] extracts a union of the values: 'Pending' | 'In Progress' | 'Done'
+
+const taskStatus: TaskStatus = 'Pending';
