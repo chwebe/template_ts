@@ -8,9 +8,10 @@
   "postCreateCommand": "",
   "customizations": {
     "vscode": {
-      "extensions": [],
+      "extensions": ["esbenp.prettier-vscode"],
       "settings": {
-        "editor.formatOnSave": true
+        "editor.formatOnSave": true,
+        "rvest.vs-code-prettier-eslint": true
       }
     }
   }
