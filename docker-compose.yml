@@ -1,6 +1,6 @@
-
 services:
   app:
+    container_name: my_custom_container
     build:
       context: .
       dockerfile: .devcontainer/Dockerfile
