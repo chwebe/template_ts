@@ -28,9 +28,10 @@ template_ts/
 ├── eslint.config.mjs      # ESLint configuration
 ├── package.json           # Project dependencies and scripts
 ├── tsconfig.json          # TypeScript configuration
-├── webpack.common.js      # Shared webpack configuration
-├── webpack.dev.js         # Development configuration
-└── webpack.prod.js        # Production configuration
+├── webpack/               # Webpack configuration files
+│   ├── webpack.common.js  # Shared webpack configuration
+│   ├── webpack.dev.js     # Development configuration
+│   └── webpack.prod.js    # Production configuration
 ```
 
 ## Dependencies
@@ -91,11 +92,11 @@ Installs all necessary development dependencies using npm.
 
 ### start
 
-Starts the development server with Webpack using the development configuration (`webpack.dev.js`).
+Starts the development server with Webpack using the development configuration (`webpack/webpack.dev.js`).
 
 ### build
 
-Builds the project using the production configuration (`webpack.prod.js`).
+Builds the project using the production configuration (`webpack/webpack.prod.js`).
 
 ### lint
 
@@ -118,14 +119,14 @@ Checks code formatting using Prettier without making changes, ensuring code adhe
 - Handles TypeScript and CSS processing
 - Sets up HTML template
 
-### webpack.dev.js
+### webpack/webpack.dev.js
 
 - Development mode
 - Source maps enabled
 - Hot module replacement
 - Development server configuration
 
-### webpack.prod.js
+### webpack/webpack.prod.js
 
 - Production mode
 - Optimized output

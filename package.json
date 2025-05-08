@@ -4,8 +4,8 @@
   "description": "",
   "scripts": {
     "setup": "npm install --save-dev @tsconfig/node23 ts-loader typescript webpack webpack-cli webpack-dev-server webpack-merge html-webpack-plugin html-loader css-loader style-loader eslint @eslint/js typescript-eslint prettier eslint-config-prettier eslint-plugin-prettier eslint-plugin-html stylelint",
-    "start": "webpack serve --open --config webpack.dev.js",
-    "build": "webpack --config webpack.prod.js",
+    "start": "webpack serve --open --config webpack/webpack.dev.js",
+    "build": "webpack --config webpack/webpack.prod.js",
     "lint": "eslint src --ext .ts,.tsx",
     "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\"",
     "format:check": "prettier --ignore-path .gitignore --check \"**/*.+(js|ts|json)\""
